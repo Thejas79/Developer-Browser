@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
     "name": "Developer Browser - New Tab",
-    "version": "1.0.0",
-    "description": "A clean, developer-focused new tab page with quick links, search, and productivity tools. No tracking, no ads.",
+    "version": "1.0.1",
+    "description": "A clean, developer-focused new tab page with quick links and productivity tools. No tracking, no ads.",
     "author": "Thejas Kumar S",
     "chrome_url_overrides": {
         "newtab": "newtab.html"

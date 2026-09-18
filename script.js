@@ -14,8 +14,6 @@
         currentDate: document.getElementById('dateDisplay'),
         mainTitle: document.getElementById('mainTitle'),
         titleHint: document.getElementById('titleHint'),
-        searchForm: document.getElementById('searchForm'),
-        searchInput: document.getElementById('searchInput'),
         notepadToggle: document.getElementById('notepadToggle'),
         notepadModal: document.getElementById('notepadModal'),
         notepadClose: document.getElementById('notepadClose'),
@@ -212,34 +210,6 @@
         elements.titleHint.classList.remove('visible');
     }
 
-    // ===== Search Functions =====
-
-    function initSearch() {
-        elements.searchForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const query = elements.searchInput.value.trim();
-            if (query) {
-                // DuckDuckGo search
-                const searchUrl = `https://duckduckgo.com/?q=${encodeURIComponent(query)}`;
-                window.location.href = searchUrl;
-            }
-        });
-
-        // Focus search on '/' key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === '/' && !isInputFocused()) {
-                e.preventDefault();
-                elements.searchInput.focus();
-            }
-        });
-    }
-
-    function isInputFocused() {
-        const activeElement = document.activeElement;
-        return activeElement.tagName === 'INPUT' ||
-            activeElement.tagName === 'TEXTAREA' ||
-            activeElement.isContentEditable;
-    }
 
     // ===== Notepad Functions =====
 
@@ -620,16 +590,11 @@
         // Initialize all features
         initBackground();
         initTitle();
-        initSearch();
         initNotepad();
         initTodo();
         initLinks(); // Initialize links
         initKeyboardShortcuts();
 
-        // Focus search on load
-        setTimeout(() => {
-            elements.searchInput.focus();
-        }, 100);
     }
 
     // Start when DOM is ready

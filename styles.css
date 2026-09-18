@@ -453,7 +453,7 @@ body {
     color: var(--accent-primary);
 }
 
-/* ===== Footer: To Do List & Search Bar ===== */
+/* ===== Footer: To Do List & Note Pad ===== */
 .footer {
     padding: var(--spacing-sm) var(--spacing-md);
     display: flex;
@@ -481,61 +481,6 @@ body {
 .footer-box:hover {
     border-color: var(--accent-primary);
     background: rgba(99, 102, 241, 0.1);
-    color: var(--accent-primary);
-}
-
-.search-form {
-    flex: 1;
-    max-width: 500px;
-}
-
-.search-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.search-icon {
-    position: absolute;
-    left: var(--spacing-lg);
-    width: 20px;
-    height: 20px;
-    color: var(--text-muted);
-    pointer-events: none;
-    transition: color var(--transition-fast);
-}
-
-.search-input {
-    width: 100%;
-    padding: var(--spacing-sm) var(--spacing-md);
-    padding-left: calc(var(--spacing-md) + 28px);
-    background: var(--bg-glass);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-full);
-    color: var(--text-primary);
-    font-family: var(--font-body);
-    font-size: 0.9rem;
-    backdrop-filter: blur(10px);
-    transition: all var(--transition-normal);
-}
-
-.search-input::placeholder {
-    color: var(--text-muted);
-}
-
-.search-input:hover {
-    border-color: var(--border-hover);
-    background: rgba(255, 255, 255, 0.05);
-}
-
-.search-input:focus {
-    outline: none;
-    border-color: var(--accent-primary);
-    box-shadow: 0 0 0 4px var(--accent-glow);
-}
-
-.search-input:focus+.search-icon,
-.search-wrapper:hover .search-icon {
     color: var(--accent-primary);
 }
 
