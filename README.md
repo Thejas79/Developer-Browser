@@ -4,6 +4,9 @@ A clean, lightweight, and developer-focused Chrome New Tab extension. Perfect fo
 
 ![Developer Browser Preview](preview.png)
 
+Extension Link(Experience the minimal, Distraction Free, Developer Focused):
+https://chromewebstore.google.com/detail/lkaaahfbegggegfbloooinlbpapojgld
+
 ## ✨ Features
 
 - **Editable Title** - Personalize your new tab with a custom title (click to edit)
