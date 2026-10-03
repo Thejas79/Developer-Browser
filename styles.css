@@ -453,6 +453,79 @@ body {
     color: var(--accent-primary);
 }
 
+/* ===== DuckDuckGo Search Bar ===== */
+.duckduckgo-search-wrapper {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-xs) var(--spacing-lg);
+    z-index: 10;
+}
+
+.duckduckgo-search-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 560px;
+    background: rgba(20, 20, 35, 0.55);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    padding: 4px 6px 4px 20px;
+    transition: all var(--transition-normal);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.duckduckgo-search-container:focus-within {
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 3px var(--accent-glow), 0 4px 25px rgba(99, 102, 241, 0.15);
+}
+
+.duckduckgo-search-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    padding: 8px 0;
+    letter-spacing: 0.3px;
+}
+
+.duckduckgo-search-input::placeholder {
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+.duckduckgo-search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(99, 102, 241, 0.15);
+    border: 1px solid rgba(99, 102, 241, 0.25);
+    border-radius: 50%;
+    color: var(--accent-primary);
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: all var(--transition-fast);
+}
+
+.duckduckgo-search-btn:hover {
+    background: rgba(99, 102, 241, 0.3);
+    border-color: var(--accent-primary);
+    color: var(--text-primary);
+    transform: scale(1.05);
+}
+
+.duckduckgo-search-btn:active {
+    transform: scale(0.95);
+}
+
 /* ===== Footer: To Do List & Note Pad ===== */
 .footer {
     padding: var(--spacing-sm) var(--spacing-md);

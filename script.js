@@ -580,6 +580,33 @@
         }
     }
 
+    // ===== Search (Chrome Search API) =====
+
+    function initDuckDuckGoSearch() {
+        const searchInput = document.getElementById('duckduckgoSearch');
+        const searchButton = document.getElementById('duckduckgoSearchButton');
+
+        if (!searchInput || !searchButton) return;
+
+        function performSearch() {
+            const query = searchInput.value.trim();
+            if (!query) return;
+            chrome.search.query({
+                text: query,
+                disposition: "CURRENT_TAB"
+            });
+        }
+
+        searchButton.addEventListener('click', performSearch);
+
+        searchInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                performSearch();
+            }
+        });
+    }
+
     // ===== Initialization =====
 
     function init() {
@@ -594,6 +621,7 @@
         initTodo();
         initLinks(); // Initialize links
         initKeyboardShortcuts();
+        initDuckDuckGoSearch();
 
     }
 
